@@ -1,11 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Primeiros passos com DOM</title>
+    <style>
+
+        body {
+            font: normal 18pt arial;
+            background-color: rgb(102, 0, 197);
+            color: white;
+        }
+
+    </style>
+
 </head>
 <body>
     
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado: </p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+
+        var corpo = window.document.body
+
+        var p1 = window.document.getElementsByTagName('p')[1]
+
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'blue'
+
+        // var d = window.document.getElementsByName('msg')[0]
+        // d.innerText = 'Olá'
+
+
+        // O número dentro do colchetes mostrará qual elemento vai ser selecionado (começamdo sempre por 0)
+
+        // document.write(p1.innerText) 
+        // Esse comando só "puxa" o texto dentro da variável (no caso 'p1')
+        // window.alert(p1.innerText)
+
+    </script>
+
 </body>
 </html>
