@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        
+        /* Paleta de cores
+        Roxo escuro(cor 1):    
+        #4E4375
+        
+        Roxo(cor 2): 
+        #5130CA
+
+        Branco(cor 3):
+        #FFFFF
+        
+        */
+        
+        :root {
+            --cor1: #4E4375;
+            --cor2: #5130CA;
+            --cor3: #FFFFFF;
+
+            --fonte1: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            text-align: center;
+            font-family: var(--fonte1);
+            background-color: var(--cor1);
+            color: var(--cor3);
+        }
+
+        h1#header {
+            font-size: 3rem;
+            margin: 20px 0px;
+        }
+
+        label#q {
+            display: block;
+            font-size: 1.3rem;
+            margin: 20px 0px;
+        }
+        
+        input#itxt {
+            width: 300px;
+            height: 20px;
+            margin: 20px 0px;
+        }
+
+        input#botao {
+            margin: auto;
+            padding: 15px;
+            display: block;
+            font-weight: bolder;
+            background-color: var(--cor2);
+            color: var(--cor3);
+            box-shadow: 0px 0px 2px white;
+        }
+
+        div#nasc {
+            margin: 20px 0px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1 id="header">De onde você é?</h1>
+    <form action="post.php">
+    
+        <label id="q" for="itxt">Onde você nasceu? </label>
+        <input type="text" name="txt" id="itxt" required>
+    
+        <input id="botao" type="button" value="Verificar" onclick="verificar()">
+    </form>
+
+    <div id="nasc">
+
+    </div>
+
+
+    <script>
+    
+        function verificar() {
+            var itxt = window.document.querySelector('input#itxt')
+    
+            var res = window.document.querySelector('div#nasc')
+
+            var país = itxt.value
+
+            if (país == 'Brasil') {
+                res.innerHTML = 'Você é brasileiro!'
+            }else {
+                res.innerHTML = 'Você é estrangeiro!'
+            }
+
+
+        }
+
+    </script>
+
+
+</body>
+</html>
