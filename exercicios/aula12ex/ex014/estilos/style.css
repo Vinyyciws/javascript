@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+/* 
+
+Paleta de cores de fundo:
+
+Manhã: #ffa157
+Tarde: #69504b
+Noite: #171e31
+
+*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font: normal 15pt Arial;
+    background-color: rgb(57, 171, 247);
+    color: white;
+}
+
+header > h1 {
+    margin: 20px;
+}
+
+header, footer {
+    text-align: center;
+}
+
+section {
+    margin: auto;
+    width: 500px;
+    padding: 15px;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.253);
+}
+
+section > div {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+footer {
+    margin: 20px;
+}
