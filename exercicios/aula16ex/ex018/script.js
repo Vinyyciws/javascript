@@ -23,7 +23,7 @@ function add() {
 
     if (isNum(num.value) && !isSel(num.value, val)) {
         val.push(Number(num.value))
-        
+        // Já está salvando os dados digitados dentro da array
 
     } else {
         alert('Dados inválidos. Verifique os valores inseridos!')
