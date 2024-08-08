@@ -23,10 +23,19 @@ function add() {
 
     if (isNum(num.value) && !isSel(num.value, val)) {
         val.push(Number(num.value))
-        // Já está salvando os dados digitados dentro da array
+        let optArr = document.createElement('option')
+
+        for (let key in val) {
+            optArr.innerText = `${val[key]}. Valor adicionado`
+
+            // console.log(`A posição ${key} contém o valor ${val[key]}`)
+        }
+        sel.appendChild(optArr)
+
+
 
     } else {
-        alert('Dados inválidos. Verifique os valores inseridos!')
+        alert('Dados inválidos ou já existentes. Verifique os valores inseridos!')
     }
 
 
