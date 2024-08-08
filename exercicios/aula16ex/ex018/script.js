@@ -20,23 +20,20 @@ function isSel(n, l) {
 }
 
 function add() {
-
     if (isNum(num.value) && !isSel(num.value, val)) {
         val.push(Number(num.value))
         let optArr = document.createElement('option')
 
         for (let key in val) {
             optArr.innerText = `${val[key]}. Valor adicionado`
-
-            // console.log(`A posição ${key} contém o valor ${val[key]}`)
         }
         sel.appendChild(optArr)
-
-
-
     } else {
         alert('Dados inválidos ou já existentes. Verifique os valores inseridos!')
     }
+}
 
-
+// NOT WORKING ! (escrever o total de valores, só tá salvando na var res)
+function finalizar() {
+    res = val.length
 }
