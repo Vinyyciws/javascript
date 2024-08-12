@@ -33,7 +33,33 @@ function add() {
     }
 }
 
-// NOT WORKING ! (escrever o total de valores, só tá salvando na var res)
 function finalizar() {
-    res = val.length
+    res.innerHTML = ''
+    // Total de números
+    let totalNum = document.createElement('p')
+    res.appendChild(totalNum)
+    totalNum.innerText = `Total de números adicionados: ${val.length}`
+    // Maior e menor número
+    val.sort()
+    let lastNum = Math.max.apply(null, val)
+    let largestNum = document.createElement('p')
+    res.appendChild(largestNum)
+    largestNum.innerText = `Maior valor adicionado: ${lastNum}`
+    let firstNum = Math.min.apply(null, val)
+    let lowestNum = document.createElement('p')
+    res.appendChild(lowestNum)
+    lowestNum.innerText = `Menor valor adicionado: ${firstNum}`
+    // Soma dos números
+    let sum = 0
+    for (let i = 0; i < val.length; i++) {
+        sum += val[i]
+    }
+    let sumOfNum = document.createElement('p')
+    res.appendChild(sumOfNum)
+    sumOfNum.innerText = `A soma de todos os valores adicionados é de: ${sum}`
+    // Média dos valores
+    let average = sum/val.length
+    let avOfNum = document.createElement('p')
+    res.appendChild(avOfNum)
+    avOfNum.innerText = `A média entre os valores adicionados é de: ${average}`
 }
